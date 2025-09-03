@@ -25,7 +25,7 @@ return {
       end, { desc = 'Telescope find in neovim packages' })
       vim.keymap.set('n', '<leader>sk', builtin.git_files, { desc = 'Telescope find git files' })
       vim.keymap.set('n', '<leader>sg', function()
-        builtin.grep_string({ search = vim.fn.input("Grep > ") });
+        builtin.live_grep();
       end, { desc = 'Telescope grep files' })
       vim.keymap.set('n', '<leader>sc', function()
         builtin.grep_string();
