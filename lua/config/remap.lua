@@ -12,4 +12,3 @@ vim.keymap.set("n", "<leader>t", function()
   vim.cmd.startinsert()
 end
 )
-vim.keymap.set("t", "<Esc>", "<C-\\><C-N>")
