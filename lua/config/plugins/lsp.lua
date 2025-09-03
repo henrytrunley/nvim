@@ -13,12 +13,11 @@ return {
       },
     },
     config = function()
-      vim.lsp.config["lua_ls"] = {
-        cmd = { "lua-language-server" },
-        filetypes = { "lua" },
-        root_markers = { ".luarc.json", ".luarc.jsonc" },
-      }
+      -- Enable servers
       vim.lsp.enable("lua_ls")
+      vim.lsp.enable("ocamllsp")
+
+      -- General Settings
       vim.diagnostic.config({ virtual_text = true })
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
